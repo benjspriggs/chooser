@@ -7,9 +7,9 @@ Super simple chooser of backgrounds. Used as a random background roulette for [m
 Requires a `.settings` file:
 ```json
 {"config": 
-	{"app-root": "<root dir of this app>", 
-		"root": "<web root>", 
-		"poss-path": "<path to where possible images are stored>.json", 
+	{
+		"app-root": "<root dir of this app>/", 
+		"root": "<web root (external)>/", 
 		"urls-path": "<path to where possible images are stored>.txt",
 		"api-key": "<key to TinyPNG api>",
 		"cache-prefix": "<hostname to prefix cached images with>/"
