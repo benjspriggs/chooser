@@ -1,0 +1,20 @@
+AddHandler cgi-script .py .pl .cgi
+Options +ExecCGI
+
+RewriteEngine On
+
+RewriteRule ^([^\.]+)$ $1.py [NC,L]
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^.+$ ./get-photo.py
+
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files .settings>
+Order Allow,Deny
+Deny from all
+</Files>
